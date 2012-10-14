@@ -1,1 +1,13 @@
-2012/09/22-13:49:31.852 fd0 Delete type=3 #1
+2012/10/13-21:40:34.089 dc8 Recovering log #12
+2012/10/13-21:40:34.090 dc8 Level-0 table #14: started
+2012/10/13-21:40:34.103 dc8 Level-0 table #14: 12975 bytes OK
+2012/10/13-21:40:34.120 dc8 Delete type=0 #12
+2012/10/13-21:40:34.120 dc8 Delete type=3 #10
+2012/10/13-21:40:34.120 de4 Compacting 4@0 + 0@1 files
+2012/10/13-21:40:34.141 de4 Generated table #16: 399 keys, 127264 bytes
+2012/10/13-21:40:34.141 de4 Compacted 4@0 + 0@1 files => 127264 bytes
+2012/10/13-21:40:34.146 de4 Delete type=2 #5
+2012/10/13-21:40:34.147 de4 Delete type=2 #8
+2012/10/13-21:40:34.147 de4 Delete type=2 #11
+2012/10/13-21:40:34.147 de4 Delete type=2 #14
+2012/10/13-21:40:34.147 de4 compacted to: files[ 0 1 0 0 0 0 0 ]

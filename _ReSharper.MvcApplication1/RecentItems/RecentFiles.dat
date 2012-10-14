@@ -1,14 +1,24 @@
 ﻿<RecentFiles>
   <RecentFiles>
-    <File id="458AFDD5-066A-476A-BD8D-A65EA7DCA437/d:Models/f:Test.cs" caret="317" fromTop="11" />
-    <File id="458AFDD5-066A-476A-BD8D-A65EA7DCA437/d:Mappings/f:Test.cs" caret="325" fromTop="12" />
-    <File id="458AFDD5-066A-476A-BD8D-A65EA7DCA437/d:Controllers/f:HomeController.cs" caret="782" fromTop="33" />
-    <File id="458AFDD5-066A-476A-BD8D-A65EA7DCA437/f:Global.asax.cs" caret="1915" fromTop="32" />
+    <File id="61952C2D-D4D6-42C0-A877-38EE927D91F6/d:Views/d:Home/d:Partial/f:SearchFilter.cshtml" caret="0" fromTop="0" />
+    <File id="61952C2D-D4D6-42C0-A877-38EE927D91F6/d:Views/d:Home/f:Index.cshtml" caret="0" fromTop="0" />
+    <File id="61952C2D-D4D6-42C0-A877-38EE927D91F6/d:Views/f:_ViewStart.cshtml" caret="0" fromTop="0" />
+    <File id="61952C2D-D4D6-42C0-A877-38EE927D91F6/f:Web.Debug.config" caret="0" fromTop="0" />
+    <File id="61952C2D-D4D6-42C0-A877-38EE927D91F6/f:Web.config" caret="0" fromTop="0" />
+    <File id="61952C2D-D4D6-42C0-A877-38EE927D91F6/f:Global.asax.cs" caret="371" fromTop="14" />
+    <File id="61952C2D-D4D6-42C0-A877-38EE927D91F6/d:Filters/f:InitializeSimpleMembershipAttribute.cs" caret="234" fromTop="12" />
+    <File id="61952C2D-D4D6-42C0-A877-38EE927D91F6/d:Scripts/f:_references.js" caret="285" fromTop="6" />
+    <File id="61952C2D-D4D6-42C0-A877-38EE927D91F6/d:Controllers/f:HomeController.cs" caret="429" fromTop="10" />
+    <File id="61952C2D-D4D6-42C0-A877-38EE927D91F6/d:Models/f:ViewModel.cs" caret="878" fromTop="34" />
+    <File id="61952C2D-D4D6-42C0-A877-38EE927D91F6/d:Scripts/f:Core.js" caret="766" fromTop="27" />
+    <File id="61952C2D-D4D6-42C0-A877-38EE927D91F6/d:Views/d:Shared/f:_Layout.cshtml" caret="557" fromTop="12" />
+    <File id="61952C2D-D4D6-42C0-A877-38EE927D91F6/d:Views/d:Home/d:Partial/f:PagedGrid.cshtml" caret="343" fromTop="15" />
+    <File id="61952C2D-D4D6-42C0-A877-38EE927D91F6/d:Content/f:Site.css" caret="4127" fromTop="20" />
   </RecentFiles>
   <RecentEdits>
-    <File id="458AFDD5-066A-476A-BD8D-A65EA7DCA437/d:Models/f:Test.cs" caret="315" fromTop="11" />
-    <File id="458AFDD5-066A-476A-BD8D-A65EA7DCA437/d:Mappings/f:Test.cs" caret="314" fromTop="11" />
-    <File id="458AFDD5-066A-476A-BD8D-A65EA7DCA437/d:Controllers/f:HomeController.cs" caret="783" fromTop="33" />
-    <File id="458AFDD5-066A-476A-BD8D-A65EA7DCA437/f:Global.asax.cs" caret="1949" fromTop="43" />
+    <File id="61952C2D-D4D6-42C0-A877-38EE927D91F6/d:Filters/f:InitializeSimpleMembershipAttribute.cs" caret="229" fromTop="10" />
+    <File id="61952C2D-D4D6-42C0-A877-38EE927D91F6/d:Models/f:ViewModel.cs" caret="937" fromTop="18" />
+    <File id="61952C2D-D4D6-42C0-A877-38EE927D91F6/d:Controllers/f:HomeController.cs" caret="901" fromTop="19" />
+    <File id="61952C2D-D4D6-42C0-A877-38EE927D91F6/d:Views/d:Home/d:Partial/f:PagedGrid.cshtml" caret="343" fromTop="15" />
   </RecentEdits>
 </RecentFiles>

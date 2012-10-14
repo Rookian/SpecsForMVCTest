@@ -1,33 +1,12 @@
-﻿@{
-    ViewBag.Title = "Home Page";
-}
-@model MvcApplication1.Models.Test
-<h2>@ViewBag.Message</h2>
-<p>
-    To learn more about ASP.NET MVC visit <a href="http://asp.net/mvc" title="ASP.NET MVC Website">
-        http://asp.net/mvc</a>.
-</p>
-@using (Html.BeginForm("Speichern", "Home", FormMethod.Post, new { id = "form1" }))
-{
-    @Html.ValidationMessageFor(x => x.Name)
-    @Html.TextBoxFor(x => x.Name)    
-    @Html.TextBoxFor(x => x.AnotherProperty)
-    <button type="submit" value="send">
-        Speichern</button>
-}
-<script>
-    $(function () {
-        $("#form1").submit(function (event) {
-            event.preventDefault();
-            var data = $("#form1").serialize();
-            var url = this.action;
+﻿@model MvcApplication1.Models.ViewModel
 
-            $.ajax({
-                type: 'POST',
-                url: url,
-                data: data,
-                success: function () { alert("Erfolg!"); }
-            });
-        });
-    });
-</script>
+<h3>Filter</h3>
+@{
+    Html.RenderPartial("Partial/SearchFilter", Model.SearchFilter);
+}
+<h3>Grid</h3>
+<div id="gridContainer">
+    @{
+        Html.RenderPartial("Partial/PagedGrid", Model);
+    }
+</div>
