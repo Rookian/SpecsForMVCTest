@@ -1,0 +1,7 @@
+C:\Development\MvcApplication1\MvcApplication1\bin\MvcApplication1.dll
+C:\Development\MvcApplication1\MvcApplication1\bin\MvcApplication1.pdb
+C:\Development\MvcApplication1\MvcApplication1\bin\EntityFramework.dll
+C:\Development\MvcApplication1\MvcApplication1\bin\EntityFramework.xml
+C:\Development\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.csprojResolveAssemblyReference.cache
+C:\Development\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.dll
+C:\Development\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.pdb
