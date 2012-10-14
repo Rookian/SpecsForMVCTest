@@ -1,0 +1,6 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<sitemanifest>
+  <IisApp path="C:\Users\Alex\Documents\Visual Studio 2012\Projects\MvcApplication1\Tests\bin\Debug\SpecsForMvc.TestSite" managedRuntimeVersion="v4.0" />
+  <setAcl path="C:\Users\Alex\Documents\Visual Studio 2012\Projects\MvcApplication1\Tests\bin\Debug\SpecsForMvc.TestSite" setAclResourceType="Directory" />
+  <setAcl path="C:\Users\Alex\Documents\Visual Studio 2012\Projects\MvcApplication1\Tests\bin\Debug\SpecsForMvc.TestSite" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+</sitemanifest>

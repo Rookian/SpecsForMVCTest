@@ -1,0 +1,30 @@
+﻿@using MvcContrib.UI.Grid
+@using MvcContrib.UI.Pager
+@using Microsoft.Web.Mvc
+@model MvcApplication1.Models.ViewModel
+
+@Html.Grid(Model.List).Columns(c =>
+{
+    c.For(x => x.Id);
+    c.For(x => x.Name);
+})
+
+@Html.Pager(Model.List).Link(currentPage => Url.Action("Index", new
+    {
+        page = currentPage,
+        Model.SearchFilter.Name
+    }))
+
+
+@using (Html.BeginForm("About", "Home", FormMethod.Post))
+{
+    @Html.TextBoxFor(x => x.SearchFilter.Name)
+    @Html.SubmitButton()
+}
+
+
+@using (Html.BeginForm("Contact", "Home", FormMethod.Post))
+{
+    @Html.TextBoxFor(x => x.SearchFilter.Name)
+    @Html.SubmitButton()
+}

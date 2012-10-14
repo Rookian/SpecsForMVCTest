@@ -1,0 +1,12 @@
+﻿@model MvcApplication1.Models.ViewModel
+
+<h3>Filter</h3>
+@{
+    Html.RenderPartial("Partial/SearchFilter", Model.SearchFilter);
+}
+<h3>Grid</h3>
+<div id="gridContainer">
+    @{
+        Html.RenderPartial("Partial/PagedGrid", Model);
+    }
+</div>

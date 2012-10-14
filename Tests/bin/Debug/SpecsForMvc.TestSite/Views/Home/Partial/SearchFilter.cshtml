@@ -1,0 +1,10 @@
+﻿@using Microsoft.Web.Mvc
+@model MvcApplication1.Models.SearchFilter
+
+@using (Html.BeginForm("Index", "Home", FormMethod.Post, new { id = "searchForm" }))
+{
+    
+    @Html.LabelFor(x => x.Name)
+    @Html.TextBoxFor(x => x.Name)
+    @Html.SubmitButton("btnSearch", "Search")
+}
