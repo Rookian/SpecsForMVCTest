@@ -303,6 +303,9 @@
     <Content Include="Views\Web.config" />
     <Content Include="Views\Home\Partial\PagedGrid.cshtml" />
     <Content Include="Views\Home\Partial\SearchFilter.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\Object.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\_Layout.cshtml" />
+    <Content Include="Views\Shared\DisplayTemplates\String.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

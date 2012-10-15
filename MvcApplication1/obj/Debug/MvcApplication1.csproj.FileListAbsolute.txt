@@ -58,8 +58,3 @@ C:\Users\Alex\Documents\Visual Studio 2012\Projects\MvcApplication1\MvcApplicati
 C:\Users\Alex\Documents\Visual Studio 2012\Projects\MvcApplication1\MvcApplication1\bin\Ionic.Zip.xml
 C:\Users\Alex\Documents\Visual Studio 2012\Projects\MvcApplication1\MvcApplication1\bin\Rhino.Mocks.xml
 C:\Users\Alex\Documents\Visual Studio 2012\Projects\MvcApplication1\MvcApplication1\bin\WebDriver.xml
-C:\Users\Alex\Documents\Visual Studio 2012\Projects\MvcApplication1\MvcApplication1\obj\Debug\MvcApplication1.csprojResolveAssemblyReference.cache
-C:\Users\Alex\Documents\Visual Studio 2012\Projects\MvcApplication1\MvcApplication1\obj\Debug\Package\MvcApplication1.SourceManifest.xml
-C:\Users\Alex\Documents\Visual Studio 2012\Projects\MvcApplication1\MvcApplication1\obj\Debug\Package\MvcApplication1.SetParameters.xml
-C:\Users\Alex\Documents\Visual Studio 2012\Projects\MvcApplication1\MvcApplication1\obj\Debug\Package\MvcApplication1.deploy.cmd
-C:\Users\Alex\Documents\Visual Studio 2012\Projects\MvcApplication1\MvcApplication1\obj\Debug\Package\MvcApplication1.deploy-readme.txt

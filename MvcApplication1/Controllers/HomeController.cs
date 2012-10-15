@@ -21,7 +21,7 @@ namespace MvcApplication1.Controllers
 
             viewModel.List = pagedList;
             viewModel.SearchFilter = filter ?? new SearchFilter();
-           
+            viewModel.Test = "HAHAHAH";
             if (Request.IsAjaxRequest())
             {
                 return PartialView("Partial/PagedGrid", viewModel);

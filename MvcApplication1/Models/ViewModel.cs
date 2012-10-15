@@ -14,6 +14,7 @@ namespace MvcApplication1.Models
     {
         public IPagination<Data> List { get; set; }
         public SearchFilter SearchFilter { get; set; }
+        public string Test { get; set; }
     }
 
     public class SearchFilter
