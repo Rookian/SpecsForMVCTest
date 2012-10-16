@@ -12,6 +12,8 @@ namespace MvcApplication1.Controllers
     {
         public ActionResult Index(SearchFilter filter, int page = 1)
         {
+            page = page == 0 ?  1 : page;
+
             const int pageSize = 10;
             var viewModel = new ViewModel();
 

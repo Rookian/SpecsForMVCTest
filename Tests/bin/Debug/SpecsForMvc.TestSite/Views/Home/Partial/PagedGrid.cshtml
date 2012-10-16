@@ -1,6 +1,5 @@
 ﻿@using MvcContrib.UI.Grid
 @using MvcContrib.UI.Pager
-@using Microsoft.Web.Mvc
 @model MvcApplication1.Models.ViewModel
 
 @Html.Grid(Model.List).Columns(c =>
@@ -19,12 +18,16 @@
 @using (Html.BeginForm("About", "Home", FormMethod.Post))
 {
     @Html.TextBoxFor(x => x.SearchFilter.Name)
-    @Html.SubmitButton()
+    <input type="submit" value="Click"/>
 }
 
 
 @using (Html.BeginForm("Contact", "Home", FormMethod.Post))
 {
     @Html.TextBoxFor(x => x.SearchFilter.Name)
-    @Html.SubmitButton()
+    <input type="submit" value="Click"/>
 }
+
+Test:
+@*<span id="@Html.IdFor(x => x.Test)">@Model.Test</span>*@
+@Html.DisplayFor(x => x.Test)

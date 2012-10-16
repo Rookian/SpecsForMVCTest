@@ -30,3 +30,35 @@ C:\Users\Alex\Documents\Visual Studio 2012\Projects\MvcApplication1\Tests\obj\De
 C:\Users\Alex\Documents\Visual Studio 2012\Projects\MvcApplication1\Tests\obj\Debug\Tests.dll
 C:\Users\Alex\Documents\Visual Studio 2012\Projects\MvcApplication1\Tests\obj\Debug\Tests.pdb
 C:\Users\Alex\Documents\Visual Studio 2012\Projects\MvcApplication1\Tests\bin\Debug\Tests.dll.config
+C:\Development\MvcApplication1\Tests\bin\Debug\Tests.dll.config
+C:\Development\MvcApplication1\Tests\bin\Debug\Tests.dll
+C:\Development\MvcApplication1\Tests\bin\Debug\Tests.pdb
+C:\Development\MvcApplication1\Tests\bin\Debug\Ionic.Zip.dll
+C:\Development\MvcApplication1\Tests\bin\Debug\Machine.Specifications.Clr4.dll
+C:\Development\MvcApplication1\Tests\bin\Debug\Machine.Specifications.dll
+C:\Development\MvcApplication1\Tests\bin\Debug\Microsoft.Web.Mvc.dll
+C:\Development\MvcApplication1\Tests\bin\Debug\MvcApplication1.dll
+C:\Development\MvcApplication1\Tests\bin\Debug\MvcContrib.TestHelper.dll
+C:\Development\MvcApplication1\Tests\bin\Debug\Newtonsoft.Json.dll
+C:\Development\MvcApplication1\Tests\bin\Debug\Rhino.Mocks.dll
+C:\Development\MvcApplication1\Tests\bin\Debug\SpecsFor.Mvc.dll
+C:\Development\MvcApplication1\Tests\bin\Debug\WebDriver.dll
+C:\Development\MvcApplication1\Tests\bin\Debug\MvcContrib.dll
+C:\Development\MvcApplication1\Tests\bin\Debug\System.Web.Optimization.dll
+C:\Development\MvcApplication1\Tests\bin\Debug\System.Web.Http.dll
+C:\Development\MvcApplication1\Tests\bin\Debug\FizzWare.NBuilder.dll
+C:\Development\MvcApplication1\Tests\bin\Debug\System.Web.Http.WebHost.dll
+C:\Development\MvcApplication1\Tests\bin\Debug\WebGrease.dll
+C:\Development\MvcApplication1\Tests\bin\Debug\System.Net.Http.Formatting.dll
+C:\Development\MvcApplication1\Tests\bin\Debug\Antlr3.Runtime.dll
+C:\Development\MvcApplication1\Tests\bin\Debug\MvcApplication1.pdb
+C:\Development\MvcApplication1\Tests\bin\Debug\Ionic.Zip.xml
+C:\Development\MvcApplication1\Tests\bin\Debug\Newtonsoft.Json.xml
+C:\Development\MvcApplication1\Tests\bin\Debug\Rhino.Mocks.xml
+C:\Development\MvcApplication1\Tests\bin\Debug\WebDriver.xml
+C:\Development\MvcApplication1\Tests\bin\Debug\System.Web.Http.xml
+C:\Development\MvcApplication1\Tests\bin\Debug\System.Web.Http.WebHost.xml
+C:\Development\MvcApplication1\Tests\bin\Debug\System.Net.Http.Formatting.xml
+C:\Development\MvcApplication1\Tests\obj\Debug\Tests.csprojResolveAssemblyReference.cache
+C:\Development\MvcApplication1\Tests\obj\Debug\Tests.dll
+C:\Development\MvcApplication1\Tests\obj\Debug\Tests.pdb

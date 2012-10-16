@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Collections.ObjectModel;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Reflection;
-using System.Web.Compilation;
 using System.Web.Mvc;
 using Machine.Specifications;
 using MvcApplication1;
@@ -15,29 +13,64 @@ using SpecsFor.Mvc;
 
 namespace Tests
 {
+    public class SmokerTester
+    {
+        readonly MvcWebApp _mvcWebApp;
+
+        public SmokerTester(MvcWebApp mvcWebApp)
+        {
+            _mvcWebApp = mvcWebApp;
+        }
+
+        public void Execute(Assembly assemblyToScanForControllerTypes)
+        {
+            var controllerTypes = assemblyToScanForControllerTypes.GetTypes().Where(type => typeof(Controller).IsAssignableFrom(type)).ToList();
+            foreach (var controllerType in controllerTypes)
+            {
+                var methodInfos = controllerType.GetMethods().Where(type => typeof(ActionResult).IsAssignableFrom(type.ReturnType));
+                foreach (var methodInfo in methodInfos)
+                {
+                    var parameterTypes = methodInfo.GetParameters().Select(i => i.ParameterType);
+                    var controllerActionCallExpression = Helper.CreateCallExpressionForMVCController(methodInfo, parameterTypes);
+
+                    var method = typeof(MvcWebApp).GetMethod("NavigateTo").MakeGenericMethod(controllerType);
+                    
+
+                    //try
+                    //{
+                        //_mvcWebApp.NavigateTo<HomeController>(x=>x.Index());
+                        method.Invoke(_mvcWebApp, new object[] { controllerActionCallExpression });
+                        var allText = _mvcWebApp.AllText();
+                        allText.ShouldNotContain("Server Error in");
+                    //}
+                    //catch (Exception exception)
+                    //{
+                    //    var controllerName = controllerType.Name;
+                    //    var actionName = methodInfo.Name;
+                    //    var message = String.Format("There was an error when invoking controller '{0}' with action '{1}'. See inner exception", controllerName, actionName);
+
+                    //    throw new Exception(message, exception);
+                    //}
+                }
+            }
+        }
+    }
+
     [Subject(typeof(HomeController))]
-    public class When_navigating_to_Home_About
+    public class When_smoke_testing_all_sites
     {
 
         static MvcWebApp SUT;
-
+        static SmokerTester SmokerTester;
         Establish context = () =>
         {
             SUT = new MvcWebApp();
+            SmokerTester = new SmokerTester(SUT);
         };
 
-        Because of = () =>
-        {
-            var methodInfo = typeof (HomeController).GetMethod("Index");
-            var parameterInfos = methodInfo.GetParameters();
+        Because of = () => SmokerTester.Execute(typeof(HomeController).Assembly);
 
-            var callExpression = Helper.CreateCallExpression<HomeController>(methodInfo, parameterInfos
-                    .Select(parameterInfo => Expression.Parameter(parameterInfo.ParameterType,  parameterInfo.Name)).ToArray());
-
-            SUT.NavigateTo(callExpression);
-        };
-
-        It should_show_some_content = () => SUT.AllText().ShouldNotBeEmpty();
+        It should_be_no_errors = () => true.ShouldBeTrue();
     }
 
     [Subject(typeof(HomeController))]
@@ -79,12 +112,35 @@ namespace Tests
 
     public static class Helper
     {
-        public static Expression<Action<T>> CreateCallExpression<T>(MethodInfo method, ParameterExpression[] arguments)
+        public static LambdaExpression CreateCallExpressionForMVCController(MethodInfo methodInfo, IEnumerable<Type> parameters)
+        {
+            var controllerType = methodInfo.DeclaringType;
+            if (controllerType == null)
+                throw new InvalidOperationException(string.Format("Could not determine controller type for method {0}", methodInfo.Name));
+
+            var tArgs = new List<Type> { controllerType, typeof(void) };
+
+            var delegateType = Expression.GetDelegateType(tArgs.ToArray());
+
+            var parameter = Expression.Parameter(controllerType, "x");
+
+            var expression = Expression.Lambda(delegateType, Expression.Call(parameter, methodInfo, parameters.Select(Expression.Default)), parameter);
+
+            return expression;
+        }
+
+        public static Expression<Action> CreateCallExpression(Type type, MethodInfo methodInfo, IEnumerable<Type> parameters)
+        {
+            var parameter = Expression.Parameter(type, "x");
+            return Expression.Lambda<Action>(
+                Expression.Call(parameter, methodInfo, parameters.Select(Expression.Default)), parameter);
+        }
+
+        public static Expression<Action<T>> CreateCallExpression<T>(MethodInfo method, IEnumerable<Type> parameters) where T : Controller
         {
             var parameter = Expression.Parameter(typeof(T), "x");
             return Expression.Lambda<Action<T>>(
-                Expression.Call(parameter, method, arguments), parameter);
+                Expression.Call(parameter, method, parameters.Select(Expression.Default)), parameter);
         }
- 
     }
 }
