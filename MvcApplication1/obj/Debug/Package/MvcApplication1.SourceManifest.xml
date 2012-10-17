@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <sitemanifest>
-  <IisApp path="C:\Development\MvcApplication1\Tests\bin\Debug\SpecsForMvc.TestSite" managedRuntimeVersion="v4.0" />
-  <setAcl path="C:\Development\MvcApplication1\Tests\bin\Debug\SpecsForMvc.TestSite" setAclResourceType="Directory" />
-  <setAcl path="C:\Development\MvcApplication1\Tests\bin\Debug\SpecsForMvc.TestSite" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
+  <IisApp path="C:\Development\SpecsForMVCTest\Tests\bin\Debug\SpecsForMvc.TestSite" managedRuntimeVersion="v4.0" />
+  <setAcl path="C:\Development\SpecsForMVCTest\Tests\bin\Debug\SpecsForMvc.TestSite" setAclResourceType="Directory" />
+  <setAcl path="C:\Development\SpecsForMVCTest\Tests\bin\Debug\SpecsForMvc.TestSite" setAclUser="anonymousAuthenticationUser" setAclResourceType="Directory" />
 </sitemanifest>

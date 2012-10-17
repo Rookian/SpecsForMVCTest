@@ -8,16 +8,18 @@ using Machine.Specifications;
 using MvcApplication1;
 using MvcApplication1.Controllers;
 using MvcApplication1.Models;
+using Ploeh.AutoFixture;
+using Ploeh.AutoFixture.Kernel;
 using SpecsFor.Mvc;
 
 
 namespace Tests
 {
-    public class SmokerTester
+    public class SmokeTester
     {
         readonly MvcWebApp _mvcWebApp;
 
-        public SmokerTester(MvcWebApp mvcWebApp)
+        public SmokeTester(MvcWebApp mvcWebApp)
         {
             _mvcWebApp = mvcWebApp;
         }
@@ -34,11 +36,10 @@ namespace Tests
                     var controllerActionCallExpression = Helper.CreateCallExpressionForMVCController(methodInfo, parameterTypes);
 
                     var method = typeof(MvcWebApp).GetMethod("NavigateTo").MakeGenericMethod(controllerType);
-                    
 
                     //try
                     //{
-                        //_mvcWebApp.NavigateTo<HomeController>(x=>x.Index());
+                        //_mvcWebApp.NavigateTo<HomeController>(x=>x.Index(default(PageFilter), default(int));
                         method.Invoke(_mvcWebApp, new object[] { controllerActionCallExpression });
                         var allText = _mvcWebApp.AllText();
                         allText.ShouldNotContain("Server Error in");
@@ -59,16 +60,15 @@ namespace Tests
     [Subject(typeof(HomeController))]
     public class When_smoke_testing_all_sites
     {
-
         static MvcWebApp SUT;
-        static SmokerTester SmokerTester;
+        static SmokeTester _smokeTester;
         Establish context = () =>
         {
             SUT = new MvcWebApp();
-            SmokerTester = new SmokerTester(SUT);
+            _smokeTester = new SmokeTester(SUT);
         };
 
-        Because of = () => SmokerTester.Execute(typeof(HomeController).Assembly);
+        Because of = () => _smokeTester.Execute(typeof(HomeController).Assembly);
 
         It should_be_no_errors = () => true.ShouldBeTrue();
     }
@@ -119,10 +119,16 @@ namespace Tests
                 throw new InvalidOperationException(string.Format("Could not determine controller type for method {0}", methodInfo.Name));
 
             var tArgs = new List<Type> { controllerType, typeof(void) };
-
+            
             var delegateType = Expression.GetDelegateType(tArgs.ToArray());
 
             var parameter = Expression.Parameter(controllerType, "x");
+
+            var fixture = new Fixture();
+            var context = new SpecimenContext(fixture.Compose());
+            var value = (Data)context.Resolve(new SeededRequest(typeof(Data), null));
+
+
 
             var expression = Expression.Lambda(delegateType, Expression.Call(parameter, methodInfo, parameters.Select(Expression.Default)), parameter);
 
